@@ -1,0 +1,23 @@
+app:
+  name: frontend31-app-frontend-frontend
+  namespace: test
+  cluster: .apps.cluster-8mf2b.sandbox3125.opentlc.com
+
+git:
+  branch: main
+  repo: https://github.com/devhub-mad/frontend31-app-frontend
+  org: devhub-mad
+  name: frontend31-app-frontend
+
+image:
+  host: image-registry.openshift-image-registry.svc:5000/test
+  name: frontend31-app-frontend
+  tag: latest
+
+
+pipelineStorage:
+  pvcSize: 3Gi
+  storageClassName: ""
+
+targetEnvironment: dev
+env: []
